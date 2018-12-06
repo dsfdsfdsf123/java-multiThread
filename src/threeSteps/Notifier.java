@@ -18,7 +18,8 @@ public class Notifier implements Runnable{
         String name = Thread.currentThread().getName();
         synchronized (msg){
             msg.setMsg("唤醒线程工作");
-            msg.notify();
+//            msg.notify();
+            msg.notifyAll();
         }
     }
 }
